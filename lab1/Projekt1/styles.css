@@ -1,92 +1,93 @@
 /* spaghetti koszmar */
 body {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px calc(100vh - 80px - 3em) 3em;
+  grid-gap: 0;
+  color: white;
+  margin: 0;
+  font-family: "Arimo";
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-column: 1 / span 6;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  align-items: center;
+}
+
+main {
+  grid-column: 1 / span 5;
+  background-color: rgb(11, 25, 44);
+  padding: 10px;
+}
+
+aside {
+  grid-column: 6 / span 1;
+  background-color: rgb(30, 62, 98);
+  font-size: large;
+}
+
+@media (max-width: 1000px) {
+  body {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 80px calc(100vh - 80px - 3em) 3em;
-    grid-gap: 0;
-    color: white;
-    margin: 0;
-    font-family: 'Arimo';
-    font-weight: 300;
-    box-sizing: border-box;
+    grid-template-rows: 6em auto auto minmax(3em, auto);
+    /* tu wychodzi jakies cudo nie umiem tego ladnie zlineupowac po zmianie*/
   }
-  
-  header,
-  footer {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    grid-column: 1 / span 6;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
-    align-items: center;
-  }
-  
+
   main {
-    grid-column: 1 / span 5;
-    background-color: rgb(11, 25, 44);
-    padding: 10px;
+    grid-column: 1 / -1;
   }
-  
+
   aside {
-    grid-column: 6 / span 1;
-    background-color: rgb(30, 62, 98);
-    font-size: large;
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
-  
-  @media (max-width: 1000px) {
-    body {
-      grid-template-columns: repeat(6,1fr);
-      grid-template-rows: 6em auto auto minmax(3em, auto); 
-      /* tu wychodzi jakies cudo nie umiem tego ladnie zlineupowac po zmianie*/
-    }
-  
-    main {
-      grid-column: 1 / -1;
-    }
-  
-    aside {
-      grid-column: 1 / -1;
-      grid-row: 2;
-    }
-  }
-  
-  a:link {
-    color: rgb(255, 101, 0);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  #garf {
-    display: flex;
-    align-self: center;
-    margin: -10px;
-    padding-left: 10px;
-  }
-  
-  #headertext {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    padding-left: 20px;
-    font-size: x-large;
-  }
-  #form {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-  }
-  .galeria #garfus img,video {
-    width: 200px;
-    padding: 20px;
-  }
-  .galeria{
-    display: flex;
-    flex-flow: row wrap;
-  }
-  #zegar {
-    text-align: right;
+}
+
+a:link {
+  color: rgb(255, 101, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#garf {
+  display: flex;
+  align-self: center;
+  margin: -10px;
+  padding-left: 10px;
+}
+
+#headertext {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: x-large;
+}
+#form {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.galeria #garfus img,
+video {
+  width: 200px;
+  padding: 20px;
+}
+.galeria {
+  display: flex;
+  flex-flow: row wrap;
+}
+#zegar {
+  text-align: right;
 }
