@@ -1,0 +1,88 @@
+/* spaghetti koszmar */
+body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 85vh calc(15vh - 80px);
+    grid-gap: 0;
+    color: white;
+    margin: 0;
+    font-family: 'Arimo';
+    font-weight: 300;
+    box-sizing: border-box;
+  }
+  
+  header,
+  footer {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-column: 1 / span 6;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    align-items: center;
+  }
+  
+  main {
+    grid-column: 1 / span 5;
+    background-color: rgb(11, 25, 44);
+    padding: 10px;
+  }
+  
+  aside {
+    grid-column: 6 / span 1;
+    background-color: rgb(30, 62, 98);
+    font-size: large;
+  }
+  
+  @media (max-width: 1000px) {
+    body {
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: auto auto calc(68.7vh) calc(15vh - 80px); 
+      /* tu wychodzi jakies cudo nie umiem tego ladnie zlineupowac po zmianie przez co musze wpisac recznie dziwna wartosc do wysokosci maina*/
+    }
+  
+    main {
+      grid-column: 1 / -1;
+    }
+  
+    aside {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+  }
+  
+  a:link {
+    color: rgb(255, 101, 0);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  #garf {
+    display: flex;
+    align-self: center;
+    margin: -10px;
+    padding-left: 10px;
+  }
+  
+  #headertext {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: x-large;
+  }
+  #form {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+  .galeria #garfus img,video {
+    width: 200px;
+  }
+  .galeria{
+    display: flex;
+    flex-flow: row wrap;
+  }

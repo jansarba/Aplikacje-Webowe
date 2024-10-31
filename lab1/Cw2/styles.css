@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .collapsed-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .collapsed-table th, .collapsed-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
