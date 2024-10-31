@@ -81,8 +81,12 @@ body {
   }
   .galeria #garfus img,video {
     width: 200px;
+    padding: 20px;
   }
   .galeria{
     display: flex;
     flex-flow: row wrap;
   }
+  #zegar {
+    text-align: right;
+}
