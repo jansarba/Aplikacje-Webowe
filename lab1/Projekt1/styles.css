@@ -2,7 +2,7 @@
 body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto 85vh calc(15vh - 80px);
+    grid-template-rows: 80px calc(100vh - 80px - 3em) 3em;
     grid-gap: 0;
     color: white;
     margin: 0;
@@ -36,8 +36,8 @@ body {
   @media (max-width: 1000px) {
     body {
       grid-template-columns: repeat(6,1fr);
-      grid-template-rows: auto auto calc(68.7vh) calc(15vh - 80px); 
-      /* tu wychodzi jakies cudo nie umiem tego ladnie zlineupowac po zmianie przez co musze wpisac recznie dziwna wartosc do wysokosci maina*/
+      grid-template-rows: 6em auto auto minmax(3em, auto); 
+      /* tu wychodzi jakies cudo nie umiem tego ladnie zlineupowac po zmianie*/
     }
   
     main {
