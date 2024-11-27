@@ -1,0 +1,60 @@
+#bground {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    padding: 30px;
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 5% 1fr;
+    align-items: center;
+    background-color: red;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+
+.task.completed {
+    background-color: green;
+    color: white;
+}
+
+.toggle-button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* cwiczenie 3 v */
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 150px;
+    place-items: center;
+    background-color: black;
+}
+
+.cell {
+    display:flex;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#test{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+#next{
+    display:flex;
+    gap: 10px;
+}
