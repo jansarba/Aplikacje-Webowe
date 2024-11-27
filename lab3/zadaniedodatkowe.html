@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="bground"></div>
+
+    <script>
+      const bground = document.getElementById("bground");
+      fetch("https://dummyjson.com/todos")
+        .then((res) => res.json())
+        .then((data) => {
+          const todos = data.todos;
+          todos.forEach((element) => {
+            const task = document.createElement("div");
+            task.classList.add("task");
+            if (element.completed) task.classList.add("completed");
+            const button = document.createElement("button");
+            button.classList.add("toggle-button");
+            button.innerText = '+';
+            button.addEventListener("click", () => {
+              task.classList.toggle("completed");
+            });
+
+            const label = document.createElement("label");
+            label.innerText = element.todo;
+
+            task.appendChild(button);
+            task.appendChild(label);
+
+            bground.appendChild(task);
+          });
+        })
+    </script>
+  </body>
+</html>
