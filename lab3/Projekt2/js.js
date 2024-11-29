@@ -3,6 +3,7 @@ let lives = 3;
 let zombies = [];
 let isGameOver = false;
 let sadMusic;
+let shotSound;
 
 function scoreUpdate(hit) {
     const scoreDisplay = document.getElementById("i");
@@ -95,6 +96,8 @@ function handleHit(event) {
     if (isGameOver) return;
 
     const target = event.target.closest(".zombie");
+    shotSound = new Audio('img/shot.mp3');
+    shotSound.play();
     if (target) {
         const zombieIndex = parseInt(target.dataset.index, 10);
         zombies.splice(zombieIndex, 1);

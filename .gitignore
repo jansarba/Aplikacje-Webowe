@@ -79,3 +79,5 @@ fabric.properties
 *.DS_Store
 
 smieci/
+
+lab4/node_modules/
