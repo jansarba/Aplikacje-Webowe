@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    cursor: url('img/aim2.png'), auto;
+    user-select: none;
+}
+
+#plansza {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#screen {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#layout {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+#layout > #bar {
+    display: flex;
+    padding-top: 20px;
+}
+
+#bar > img {
+    height: 100px;
+}
+
+#layout > #i {
+    display: flex;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+#gameOverPopup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    color: white;
+
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.zombie{
+    cursor: url('img/aim3.png'), auto;
+}
